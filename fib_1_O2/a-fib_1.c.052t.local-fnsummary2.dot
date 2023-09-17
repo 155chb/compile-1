@@ -1,0 +1,91 @@
+digraph "a-fib_1.c.052t.local-fnsummary2" {
+overlap=false;
+subgraph "cluster_printf" {
+	style="dashed";
+	color="black";
+	label="printf ()";
+	fn_15_basic_block_0 [shape=Mdiamond,style=filled,fillcolor=white,label="ENTRY"];
+
+	fn_15_basic_block_1 [shape=Mdiamond,style=filled,fillcolor=white,label="EXIT"];
+
+	fn_15_basic_block_2 [shape=record,style=filled,fillcolor=lightgrey,label="{COUNT:1073741824\<bb\ 2\>:\l\
+|_4\ =\ __printf_chk\ (1,\ __fmt_2(D),\ __builtin_va_arg_pack\ ());\l\
+|return\ _4;\l\
+}"];
+
+	fn_15_basic_block_0:s -> fn_15_basic_block_2:n [style="solid,bold",color=blue,weight=100,constraint=true,label="[100%]"];
+	fn_15_basic_block_2:s -> fn_15_basic_block_1:n [style="solid,bold",color=black,weight=10,constraint=true,label="[100%]"];
+	fn_15_basic_block_0:s -> fn_15_basic_block_1:n [style="invis",constraint=true];
+}
+subgraph "cluster_fib" {
+	style="dashed";
+	color="black";
+	label="fib ()";
+	subgraph cluster_40_1 {
+	style="filled";
+	color="darkgreen";
+	fillcolor="grey88";
+	label="loop 1";
+	labeljust=l;
+	penwidth=2;
+	fn_40_basic_block_3 [shape=record,style=filled,fillcolor=lightgrey,label="{COUNT:1073741824\<bb\ 3\>:\l\
+|#\ n_4\ =\ PHI\ \<n_5(D)(2),\ _3(5)\>\l\
+|#\ add_acc_7\ =\ PHI\ \<0(2),\ add_acc_8(5)\>\l\
+|if\ (n_4\ \<=\ 2)\l\
+\ \ goto\ \<bb\ 4\>;\ [22.00%]\l\
+else\l\
+\ \ goto\ \<bb\ 5\>;\ [78.00%]\l\
+}"];
+
+	fn_40_basic_block_5 [shape=record,style=filled,fillcolor=lightgrey,label="{COUNT:212600880\<bb\ 5\>:\l\
+|_1\ =\ n_4\ +\ -1;\l\
+|_2\ =\ fib\ (_1);\l\
+|_3\ =\ n_4\ +\ -2;\l\
+|add_acc_8\ =\ add_acc_7\ +\ _2;\l\
+goto\ \<bb\ 3\>;\ [100.00%]\l\
+}"];
+
+	}
+	fn_40_basic_block_0 [shape=Mdiamond,style=filled,fillcolor=white,label="ENTRY"];
+
+	fn_40_basic_block_1 [shape=Mdiamond,style=filled,fillcolor=white,label="EXIT"];
+
+	fn_40_basic_block_2 [shape=record,style=filled,fillcolor=lightgrey,label="{COUNT:236223200\<bb\ 2\>:\l\
+}"];
+
+	fn_40_basic_block_4 [shape=record,style=filled,fillcolor=lightgrey,label="{COUNT:236223200\<bb\ 4\>:\l\
+|acc_tmp_9\ =\ add_acc_7\ +\ 1;\l\
+|return\ acc_tmp_9;\l\
+}"];
+
+	fn_40_basic_block_0:s -> fn_40_basic_block_2:n [style="solid,bold",color=blue,weight=100,constraint=true,label="[100%]"];
+	fn_40_basic_block_2:s -> fn_40_basic_block_3:n [style="solid,bold",color=blue,weight=100,constraint=true,label="[100%]"];
+	fn_40_basic_block_3:s -> fn_40_basic_block_4:n [style="solid,bold",color=black,weight=10,constraint=true,label="[22%]"];
+	fn_40_basic_block_3:s -> fn_40_basic_block_5:n [style="solid,bold",color=black,weight=10,constraint=true,label="[78%]"];
+	fn_40_basic_block_4:s -> fn_40_basic_block_1:n [style="solid,bold",color=black,weight=10,constraint=true,label="[100%]"];
+	fn_40_basic_block_5:s -> fn_40_basic_block_3:n [style="dotted,bold",color=blue,weight=10,constraint=false,label="[100%]"];
+	fn_40_basic_block_0:s -> fn_40_basic_block_1:n [style="invis",constraint=true];
+}
+subgraph "cluster_main" {
+	style="dashed";
+	color="black";
+	label="main ()";
+	fn_39_basic_block_0 [shape=Mdiamond,style=filled,fillcolor=white,label="ENTRY"];
+
+	fn_39_basic_block_1 [shape=Mdiamond,style=filled,fillcolor=white,label="EXIT"];
+
+	fn_39_basic_block_2 [shape=record,style=filled,fillcolor=lightgrey,label="{COUNT:1073741824\<bb\ 2\>:\l\
+|n\ =\ 0;\l\
+|scanf\ (\"%d\",\ &n);\l\
+|n.0_1\ =\ n;\l\
+|result_5\ =\ fib\ (n.0_1);\l\
+|__printf_chk\ (1,\ \"%d\\n\",\ result_5);\l\
+|n\ =\{v\}\ \{CLOBBER\};\l\
+|return\ 0;\l\
+}"];
+
+	fn_39_basic_block_0:s -> fn_39_basic_block_2:n [style="solid,bold",color=blue,weight=100,constraint=true,label="[100%]"];
+	fn_39_basic_block_2:s -> fn_39_basic_block_1:n [style="solid,bold",color=black,weight=10,constraint=true,label="[100%]"];
+	fn_39_basic_block_0:s -> fn_39_basic_block_1:n [style="invis",constraint=true];
+}
+}

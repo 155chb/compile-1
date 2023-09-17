@@ -1,0 +1,593 @@
+
+;; Function fib (fib, funcdef_no=40, decl_uid=3180, cgraph_uid=41, symbol_order=40)
+
+Created preheader block for loop 1
+Created preheader block for loop 2
+Created preheader block for loop 3
+Created preheader block for loop 4
+Created preheader block for loop 5
+Created preheader block for loop 6
+Created preheader block for loop 7
+Created preheader block for loop 8
+Created preheader block for loop 9
+;; 10 loops found
+;;
+;; Loop 0
+;;  header 0, latch 1
+;;  depth 0, outer -1
+;;  nodes: 0 1 2 3 30 4 5 39 6 31 7 8 40 9 32 10 11 41 12 33 13 14 42 15 34 16 17 43 18 35 19 20 44 21 36 22 23 45 24 37 25 26 46 27 38 28 47 29
+;;
+;; Loop 1
+;;  header 4, latch 39
+;;  depth 1, outer 0
+;;  nodes: 4 39 5 9 8 12 7 40 31 11 15 10 41 32 14 18 13 42 33 17 21 16 43 34 20 24 19 44 35 23 27 22 45 36 26 29 25 46 37 28 47 38
+;;
+;; Loop 2
+;;  header 7, latch 40
+;;  depth 2, outer 1
+;;  nodes: 7 40 8 12 11 15 10 41 32 14 18 13 42 33 17 21 16 43 34 20 24 19 44 35 23 27 22 45 36 26 29 25 46 37 28 47 38
+;;
+;; Loop 3
+;;  header 10, latch 41
+;;  depth 3, outer 2
+;;  nodes: 10 41 11 15 14 18 13 42 33 17 21 16 43 34 20 24 19 44 35 23 27 22 45 36 26 29 25 46 37 28 47 38
+;;
+;; Loop 4
+;;  header 13, latch 42
+;;  depth 4, outer 3
+;;  nodes: 13 42 14 18 17 21 16 43 34 20 24 19 44 35 23 27 22 45 36 26 29 25 46 37 28 47 38
+;;
+;; Loop 5
+;;  header 16, latch 43
+;;  depth 5, outer 4
+;;  nodes: 16 43 17 21 20 24 19 44 35 23 27 22 45 36 26 29 25 46 37 28 47 38
+;;
+;; Loop 6
+;;  header 19, latch 44
+;;  depth 6, outer 5
+;;  nodes: 19 44 20 24 23 27 22 45 36 26 29 25 46 37 28 47 38
+;;
+;; Loop 7
+;;  header 22, latch 45
+;;  depth 7, outer 6
+;;  nodes: 22 45 23 27 26 29 25 46 37 28 47 38
+;;
+;; Loop 8
+;;  header 25, latch 46
+;;  depth 8, outer 7
+;;  nodes: 25 46 26 29 28 47 38
+;;
+;; Loop 9
+;;  header 28, latch 47
+;;  depth 9, outer 8
+;;  nodes: 28 47
+;; 2 succs { 3 30 }
+;; 3 succs { 1 }
+;; 30 succs { 4 }
+;; 4 succs { 5 31 }
+;; 5 succs { 6 39 }
+;; 39 succs { 4 }
+;; 6 succs { 3 }
+;; 31 succs { 7 }
+;; 7 succs { 8 32 }
+;; 8 succs { 9 40 }
+;; 40 succs { 7 }
+;; 9 succs { 5 }
+;; 32 succs { 10 }
+;; 10 succs { 11 33 }
+;; 11 succs { 12 41 }
+;; 41 succs { 10 }
+;; 12 succs { 8 }
+;; 33 succs { 13 }
+;; 13 succs { 14 34 }
+;; 14 succs { 15 42 }
+;; 42 succs { 13 }
+;; 15 succs { 11 }
+;; 34 succs { 16 }
+;; 16 succs { 17 35 }
+;; 17 succs { 18 43 }
+;; 43 succs { 16 }
+;; 18 succs { 14 }
+;; 35 succs { 19 }
+;; 19 succs { 20 36 }
+;; 20 succs { 21 44 }
+;; 44 succs { 19 }
+;; 21 succs { 17 }
+;; 36 succs { 22 }
+;; 22 succs { 23 37 }
+;; 23 succs { 24 45 }
+;; 45 succs { 22 }
+;; 24 succs { 20 }
+;; 37 succs { 25 }
+;; 25 succs { 26 38 }
+;; 26 succs { 27 46 }
+;; 46 succs { 25 }
+;; 27 succs { 23 }
+;; 38 succs { 28 }
+;; 28 succs { 29 47 }
+;; 47 succs { 28 }
+;; 29 succs { 26 }
+int fib (int n)
+{
+  int D.3229;
+  int n;
+  int D.3227;
+  int n;
+  int D.3225;
+  int n;
+  int D.3223;
+  int n;
+  int D.3221;
+  int n;
+  int D.3219;
+  int n;
+  int D.3217;
+  int n;
+  int D.3215;
+  int n;
+  int _1;
+  int _3;
+  int add_acc_8;
+  int _14;
+  int _16;
+  int add_acc_17;
+  int _21;
+  int _23;
+  int add_acc_24;
+  int _28;
+  int _30;
+  int add_acc_31;
+  int _35;
+  int _37;
+  int add_acc_38;
+  int _42;
+  int _44;
+  int add_acc_45;
+  int _49;
+  int _51;
+  int add_acc_52;
+  int _56;
+  int _58;
+  int add_acc_59;
+  int _63;
+  int _64;
+  int _65;
+  int add_acc_66;
+  int add_acc_79;
+  int add_acc_80;
+  int add_acc_84;
+  int add_acc_85;
+  int add_acc_87;
+  int add_acc_88;
+  int add_acc_90;
+  int add_acc_91;
+  int add_acc_93;
+  int add_acc_94;
+  int add_acc_96;
+  int add_acc_97;
+  int add_acc_99;
+  int add_acc_100;
+  int add_acc_102;
+  int add_acc_103;
+  int add_acc_105;
+  int add_acc_106;
+  int _269;
+  int prephitmp_270;
+  int _271;
+  int prephitmp_272;
+  int _273;
+  int prephitmp_274;
+  int _275;
+  int prephitmp_276;
+  int _277;
+  int prephitmp_278;
+  int _279;
+  int prephitmp_280;
+  int _281;
+  int prephitmp_282;
+  int _283;
+  int prephitmp_284;
+  int _285;
+  int prephitmp_286;
+
+  <bb 2> [local count: 236223200]:
+  if (n_5(D) <= 2)
+    goto <bb 48>; [22.00%]
+  else
+    goto <bb 30>; [78.00%]
+
+  <bb 48> [local count: 51969104]:
+
+  <bb 3> [local count: 236223200]:
+  # add_acc_79 = PHI <add_acc_8(6), 0(48)>
+  # prephitmp_286 = PHI <_285(6), 1(48)>
+  return prephitmp_286;
+
+  <bb 30> [local count: 184254096]:
+
+  <bb 4> [local count: 837529967]:
+  # n_78 = PHI <_3(39), n_5(D)(30)>
+  # add_acc_80 = PHI <add_acc_8(39), 0(30)>
+  _1 = n_78 + -1;
+  if (_1 <= 2)
+    goto <bb 49>; [22.00%]
+  else
+    goto <bb 31>; [78.00%]
+
+  <bb 49> [local count: 184256592]:
+
+  <bb 5> [local count: 837554935]:
+  # add_acc_84 = PHI <add_acc_17(9), 0(49)>
+  # prephitmp_284 = PHI <_283(9), 1(49)>
+  _3 = n_78 + -2;
+  add_acc_8 = add_acc_80 + prephitmp_284;
+  if (_3 <= 2)
+    goto <bb 6>; [22.00%]
+  else
+    goto <bb 39>; [78.00%]
+
+  <bb 39> [local count: 653292850]:
+  goto <bb 4>; [100.00%]
+
+  <bb 6> [local count: 184262085]:
+  _285 = add_acc_8 + 1;
+  goto <bb 3>; [100.00%]
+
+  <bb 31> [local count: 653273375]:
+
+  <bb 7> [local count: 2969456207]:
+  # n_83 = PHI <_16(40), _1(31)>
+  # add_acc_85 = PHI <add_acc_17(40), 0(31)>
+  _14 = n_83 + -1;
+  if (_14 <= 2)
+    goto <bb 50>; [22.00%]
+  else
+    goto <bb 32>; [78.00%]
+
+  <bb 50> [local count: 653280362]:
+
+  <bb 8> [local count: 2969456207]:
+  # add_acc_87 = PHI <add_acc_24(12), 0(50)>
+  # prephitmp_282 = PHI <_281(12), 1(50)>
+  _16 = n_83 + -2;
+  add_acc_17 = add_acc_85 + prephitmp_282;
+  if (_16 <= 2)
+    goto <bb 9>; [22.00%]
+  else
+    goto <bb 40>; [78.00%]
+
+  <bb 40> [local count: 2316175845]:
+  goto <bb 7>; [100.00%]
+
+  <bb 9> [local count: 653280362]:
+  _283 = add_acc_17 + 1;
+  goto <bb 5>; [100.00%]
+
+  <bb 32> [local count: 2316175845]:
+
+  <bb 10> [local count: 10528074277]:
+  # n_86 = PHI <_23(41), _14(32)>
+  # add_acc_88 = PHI <add_acc_24(41), 0(32)>
+  _21 = n_86 + -1;
+  if (_21 <= 2)
+    goto <bb 51>; [22.00%]
+  else
+    goto <bb 33>; [78.00%]
+
+  <bb 51> [local count: 2316176328]:
+
+  <bb 11> [local count: 10528074277]:
+  # add_acc_90 = PHI <add_acc_31(15), 0(51)>
+  # prephitmp_280 = PHI <_279(15), 1(51)>
+  _23 = n_86 + -2;
+  add_acc_24 = add_acc_88 + prephitmp_280;
+  if (_23 <= 2)
+    goto <bb 12>; [22.00%]
+  else
+    goto <bb 41>; [78.00%]
+
+  <bb 41> [local count: 8211897949]:
+  goto <bb 10>; [100.00%]
+
+  <bb 12> [local count: 2316176328]:
+  _281 = add_acc_24 + 1;
+  goto <bb 8>; [100.00%]
+
+  <bb 33> [local count: 8211897949]:
+
+  <bb 13> [local count: 37326761134]:
+  # n_89 = PHI <_30(42), _21(33)>
+  # add_acc_91 = PHI <add_acc_31(42), 0(33)>
+  _28 = n_89 + -1;
+  if (_28 <= 2)
+    goto <bb 52>; [22.00%]
+  else
+    goto <bb 34>; [78.00%]
+
+  <bb 52> [local count: 8211887405]:
+
+  <bb 14> [local count: 37326761134]:
+  # add_acc_93 = PHI <add_acc_38(18), 0(52)>
+  # prephitmp_278 = PHI <_277(18), 1(52)>
+  _30 = n_89 + -2;
+  add_acc_31 = add_acc_91 + prephitmp_278;
+  if (_30 <= 2)
+    goto <bb 15>; [22.00%]
+  else
+    goto <bb 42>; [78.00%]
+
+  <bb 42> [local count: 29114873729]:
+  goto <bb 13>; [100.00%]
+
+  <bb 15> [local count: 8211887405]:
+  _279 = add_acc_31 + 1;
+  goto <bb 11>; [100.00%]
+
+  <bb 34> [local count: 29114873729]:
+
+  <bb 16> [local count: 132340346279]:
+  # n_92 = PHI <_37(43), _28(34)>
+  # add_acc_94 = PHI <add_acc_38(43), 0(34)>
+  _35 = n_92 + -1;
+  if (_35 <= 2)
+    goto <bb 53>; [22.00%]
+  else
+    goto <bb 35>; [78.00%]
+
+  <bb 53> [local count: 29114876024]:
+
+  <bb 17> [local count: 132340346279]:
+  # add_acc_96 = PHI <add_acc_45(21), 0(53)>
+  # prephitmp_276 = PHI <_275(21), 1(53)>
+  _37 = n_92 + -2;
+  add_acc_38 = add_acc_94 + prephitmp_276;
+  if (_37 <= 2)
+    goto <bb 18>; [22.00%]
+  else
+    goto <bb 43>; [78.00%]
+
+  <bb 43> [local count: 103225470255]:
+  goto <bb 16>; [100.00%]
+
+  <bb 18> [local count: 29114876024]:
+  _277 = add_acc_38 + 1;
+  goto <bb 14>; [100.00%]
+
+  <bb 35> [local count: 103225470255]:
+
+  <bb 19> [local count: 469206689072]:
+  # n_95 = PHI <_44(44), _35(35)>
+  # add_acc_97 = PHI <add_acc_45(44), 0(35)>
+  _42 = n_95 + -1;
+  if (_42 <= 2)
+    goto <bb 54>; [22.00%]
+  else
+    goto <bb 36>; [78.00%]
+
+  <bb 54> [local count: 103225471037]:
+
+  <bb 20> [local count: 469206714040]:
+  # add_acc_99 = PHI <add_acc_52(24), 0(54)>
+  # prephitmp_274 = PHI <_273(24), 1(54)>
+  _44 = n_95 + -2;
+  add_acc_45 = add_acc_97 + prephitmp_274;
+  if (_44 <= 2)
+    goto <bb 21>; [22.00%]
+  else
+    goto <bb 44>; [78.00%]
+
+  <bb 44> [local count: 365981237511]:
+  goto <bb 19>; [100.00%]
+
+  <bb 21> [local count: 103225476529]:
+  _275 = add_acc_45 + 1;
+  goto <bb 17>; [100.00%]
+
+  <bb 36> [local count: 365981218035]:
+
+  <bb 22> [local count: 1663551038463]:
+  # n_98 = PHI <_51(45), _42(36)>
+  # add_acc_100 = PHI <add_acc_52(45), 0(36)>
+  _49 = n_98 + -1;
+  if (_49 <= 2)
+    goto <bb 55>; [22.00%]
+  else
+    goto <bb 37>; [78.00%]
+
+  <bb 55> [local count: 365981226479]:
+
+  <bb 23> [local count: 1663551038463]:
+  # add_acc_102 = PHI <add_acc_59(27), 0(55)>
+  # prephitmp_272 = PHI <_271(27), 1(55)>
+  _51 = n_98 + -2;
+  add_acc_52 = add_acc_100 + prephitmp_272;
+  if (_51 <= 2)
+    goto <bb 24>; [22.00%]
+  else
+    goto <bb 45>; [78.00%]
+
+  <bb 45> [local count: 1297569811984]:
+  goto <bb 22>; [100.00%]
+
+  <bb 24> [local count: 365981226479]:
+  _273 = add_acc_52 + 1;
+  goto <bb 20>; [100.00%]
+
+  <bb 37> [local count: 1297569811984]:
+
+  <bb 25> [local count: 5898044627232]:
+  # n_101 = PHI <_58(46), _49(37)>
+  # add_acc_103 = PHI <add_acc_59(46), 0(37)>
+  _56 = n_101 + -1;
+  if (_56 <= 2)
+    goto <bb 56>; [22.00%]
+  else
+    goto <bb 38>; [78.00%]
+
+  <bb 56> [local count: 1297569810960]:
+
+  <bb 26> [local count: 5898044627232]:
+  # add_acc_105 = PHI <add_acc_66(29), 0(56)>
+  # prephitmp_270 = PHI <_269(29), 1(56)>
+  _58 = n_101 + -2;
+  add_acc_59 = add_acc_103 + prephitmp_270;
+  if (_58 <= 2)
+    goto <bb 27>; [22.00%]
+  else
+    goto <bb 46>; [78.00%]
+
+  <bb 46> [local count: 4600474816272]:
+  goto <bb 25>; [100.00%]
+
+  <bb 27> [local count: 1297569810960]:
+  _271 = add_acc_59 + 1;
+  goto <bb 23>; [100.00%]
+
+  <bb 38> [local count: 4600474816272]:
+
+  <bb 28> [local count: 20911249278181]:
+  # n_104 = PHI <_65(47), _56(38)>
+  # add_acc_106 = PHI <add_acc_66(47), 0(38)>
+  _63 = n_104 + -1;
+  _64 = fib (_63);
+  _65 = n_104 + -2;
+  add_acc_66 = _64 + add_acc_106;
+  if (_65 <= 2)
+    goto <bb 29>; [22.00%]
+  else
+    goto <bb 47>; [78.00%]
+
+  <bb 47> [local count: 16310774461909]:
+  goto <bb 28>; [100.00%]
+
+  <bb 29> [local count: 4600474816272]:
+  _269 = add_acc_66 + 1;
+  goto <bb 26>; [100.00%]
+
+}
+
+
+
+;; Function main (main, funcdef_no=39, decl_uid=3181, cgraph_uid=40, symbol_order=39) (executed once)
+
+Created preheader block for loop 1
+Created preheader block for loop 2
+;; 3 loops found
+;;
+;; Loop 0
+;;  header 0, latch 1
+;;  depth 0, outer -1
+;;  nodes: 0 1 2 3 8 4 5 10 9 6 11 7
+;;
+;; Loop 1
+;;  header 4, latch 10
+;;  depth 1, outer 0
+;;  nodes: 4 10 5 7 6 11 9
+;;
+;; Loop 2
+;;  header 6, latch 11
+;;  depth 2, outer 1
+;;  nodes: 6 11
+;; 2 succs { 3 8 }
+;; 3 succs { 1 }
+;; 8 succs { 4 }
+;; 4 succs { 5 9 }
+;; 5 succs { 3 10 }
+;; 10 succs { 4 }
+;; 9 succs { 6 }
+;; 6 succs { 7 11 }
+;; 11 succs { 6 }
+;; 7 succs { 5 }
+int main ()
+{
+  int D.3307;
+  int n;
+  int n;
+  int n;
+  int n.0_1;
+  int acc_tmp_8;
+  int _9;
+  int _11;
+  int add_acc_12;
+  int _13;
+  int _18;
+  int _19;
+  int _20;
+  int add_acc_21;
+  int prephitmp_22;
+  int add_acc_25;
+  int add_acc_26;
+  int add_acc_28;
+  int add_acc_29;
+
+  <bb 2> [local count: 236223200]:
+  n = 0;
+  scanf ("%d", &n);
+  n.0_1 = n;
+  if (n.0_1 <= 2)
+    goto <bb 12>; [22.00%]
+  else
+    goto <bb 8>; [78.00%]
+
+  <bb 12> [local count: 51969104]:
+
+  <bb 3> [local count: 236223200]:
+  # add_acc_25 = PHI <add_acc_12(14), 0(12)>
+  acc_tmp_8 = add_acc_25 + 1;
+  __printf_chk (1, "%d\n", acc_tmp_8);
+  n ={v} {CLOBBER};
+  return 0;
+
+  <bb 8> [local count: 184254096]:
+
+  <bb 4> [local count: 837518623]:
+  # n_24 = PHI <_11(10), n.0_1(8)>
+  # add_acc_26 = PHI <add_acc_12(10), 0(8)>
+  _9 = n_24 + -1;
+  if (_9 <= 2)
+    goto <bb 13>; [22.00%]
+  else
+    goto <bb 9>; [78.00%]
+
+  <bb 13> [local count: 184254096]:
+
+  <bb 5> [local count: 837518623]:
+  # add_acc_28 = PHI <add_acc_21(7), 0(13)>
+  # prephitmp_22 = PHI <_13(7), 1(13)>
+  _11 = n_24 + -2;
+  add_acc_12 = prephitmp_22 + add_acc_26;
+  if (_11 <= 2)
+    goto <bb 14>; [22.00%]
+  else
+    goto <bb 10>; [78.00%]
+
+  <bb 14> [local count: 184254096]:
+  goto <bb 3>; [100.00%]
+
+  <bb 10> [local count: 653264527]:
+  goto <bb 4>; [100.00%]
+
+  <bb 9> [local count: 653264527]:
+
+  <bb 6> [local count: 2969384231]:
+  # n_27 = PHI <_20(11), _9(9)>
+  # add_acc_29 = PHI <add_acc_21(11), 0(9)>
+  _18 = n_27 + -1;
+  _19 = fib (_18);
+  _20 = n_27 + -2;
+  add_acc_21 = _19 + add_acc_29;
+  if (_20 <= 2)
+    goto <bb 7>; [22.00%]
+  else
+    goto <bb 11>; [78.00%]
+
+  <bb 11> [local count: 2316119704]:
+  goto <bb 6>; [100.00%]
+
+  <bb 7> [local count: 653264527]:
+  _13 = add_acc_21 + 1;
+  goto <bb 5>; [100.00%]
+
+}
+
+

@@ -1,0 +1,285 @@
+
+;; Function main (main, funcdef_no=6, decl_uid=2865, cgraph_uid=7, symbol_order=6)
+
+verify found no changes in insn with uid = 13.
+verify found no changes in insn with uid = 16.
+verify found no changes in insn with uid = 24.
+verify found no changes in insn with uid = 34.
+
+
+main
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [ax] 1 [dx] 2 [cx] 4 [si] 5 [di] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 20 [xmm0] 21 [xmm1] 22 [xmm2] 23 [xmm3] 24 [xmm4] 25 [xmm5] 26 [xmm6] 27 [xmm7] 28 [mm0] 29 [mm1] 30 [mm2] 31 [mm3] 32 [mm4] 33 [mm5] 34 [mm6] 35 [mm7] 36 [r8] 37 [r9] 38 [r10] 39 [r11] 44 [xmm8] 45 [xmm9] 46 [xmm10] 47 [xmm11] 48 [xmm12] 49 [xmm13] 50 [xmm14] 51 [xmm15] 52 [xmm16] 53 [xmm17] 54 [xmm18] 55 [xmm19] 56 [xmm20] 57 [xmm21] 58 [xmm22] 59 [xmm23] 60 [xmm24] 61 [xmm25] 62 [xmm26] 63 [xmm27] 64 [xmm28] 65 [xmm29] 66 [xmm30] 67 [xmm31] 68 [k0] 69 [k1] 70 [k2] 71 [k3] 72 [k4] 73 [k5] 74 [k6] 75 [k7]
+;;  hardware regs used 	
+;;  regular block artificial uses 	 6 [bp] 7 [sp] 16 [argp] 19 [frame]
+;;  eh block artificial uses 	 6 [bp] 7 [sp] 16 [argp] 19 [frame]
+;;  entry block defs 	 0 [ax] 1 [dx] 2 [cx] 4 [si] 5 [di] 6 [bp] 7 [sp] 16 [argp] 19 [frame] 20 [xmm0] 21 [xmm1] 22 [xmm2] 23 [xmm3] 24 [xmm4] 25 [xmm5] 26 [xmm6] 27 [xmm7] 36 [r8] 37 [r9]
+;;  exit block uses 	 0 [ax] 6 [bp] 7 [sp] 19 [frame]
+;;  regs ever live 	 0 [ax] 4 [si] 5 [di] 7 [sp] 17 [flags]
+;;  ref usage 	r0={8d,5u} r1={5d} r2={5d} r4={7d,2u} r5={8d,3u} r6={1d,4u} r7={1d,8u} r8={4d} r9={4d} r10={4d} r11={4d} r12={4d} r13={4d} r14={4d} r15={4d} r16={1d,3u} r17={7d,1u} r18={4d} r19={1d,12u} r20={5d} r21={5d} r22={5d} r23={5d} r24={5d} r25={5d} r26={5d} r27={5d} r28={4d} r29={4d} r30={4d} r31={4d} r32={4d} r33={4d} r34={4d} r35={4d} r36={5d} r37={5d} r38={4d} r39={4d} r44={4d} r45={4d} r46={4d} r47={4d} r48={4d} r49={4d} r50={4d} r51={4d} r52={4d} r53={4d} r54={4d} r55={4d} r56={4d} r57={4d} r58={4d} r59={4d} r60={4d} r61={4d} r62={4d} r63={4d} r64={4d} r65={4d} r66={4d} r67={4d} r68={4d} r69={4d} r70={4d} r71={4d} r72={4d} r73={4d} r74={4d} r75={4d} r82={1d,1u} r83={1d,1u} r84={1d,1u} r85={1d,1u} r86={1d,1u} r87={1d,1u} r88={1d,1u} r89={1d,1u} 
+;;    total ref usage 352{306d,46u,0e} in 27{23 regular + 4 call} insns.
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 4 3 2 NOTE_INSN_FUNCTION_BEG)
+(insn 3 2 6 2 (parallel [
+            (set (mem/v/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                        (const_int -8 [0xfffffffffffffff8])) [1 D.2883+0 S8 A64])
+                (unspec:DI [
+                        (mem/v/f:DI (const_int 40 [0x28]) [0 MEM[(<address-space-1> long unsigned int *)40B]+0 S8 A64 AS1])
+                    ] UNSPEC_SP_SET))
+            (set (scratch:DI)
+                (const_int 0 [0]))
+            (clobber (reg:CC 17 flags))
+        ]) "fib_1.c":6:11 1159 {stack_protect_set_1_di}
+     (nil))
+(insn 6 3 7 2 (set (mem/c:SI (plus:DI (reg/f:DI 19 frame)
+                (const_int -16 [0xfffffffffffffff0])) [2 n+0 S4 A64])
+        (const_int 0 [0])) "fib_1.c":7:6 75 {*movsi_internal}
+     (nil))
+(insn 7 6 8 2 (set (mem/c:SI (plus:DI (reg/f:DI 19 frame)
+                (const_int -12 [0xfffffffffffffff4])) [2 result+0 S4 A32])
+        (const_int 0 [0])) "fib_1.c":7:11 75 {*movsi_internal}
+     (nil))
+(insn 8 7 9 2 (parallel [
+            (set (reg:DI 85)
+                (plus:DI (reg/f:DI 19 frame)
+                    (const_int -16 [0xfffffffffffffff0])))
+            (clobber (reg:CC 17 flags))
+        ]) "fib_1.c":8:2 210 {*adddi_1}
+     (nil))
+(insn 9 8 10 2 (set (reg:DI 4 si)
+        (reg:DI 85)) "fib_1.c":8:2 74 {*movdi_internal}
+     (nil))
+(insn 10 9 11 2 (set (reg:DI 86)
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f327f3eb5a0 *.LC0>)) "fib_1.c":8:2 74 {*movdi_internal}
+     (nil))
+(insn 11 10 12 2 (set (reg:DI 5 di)
+        (reg:DI 86)) "fib_1.c":8:2 74 {*movdi_internal}
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f327f3eb5a0 *.LC0>)
+        (nil)))
+(insn 12 11 13 2 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "fib_1.c":8:2 77 {*movqi_internal}
+     (nil))
+(call_insn 13 12 14 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("*__isoc99_scanf") [flags 0x41]  <function_decl 0x7f327f2b9d00 scanf>) [0 __builtin_scanf S1 A8])
+            (const_int 0 [0]))) "fib_1.c":8:2 824 {*call_value}
+     (nil)
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (nil)))))
+(insn 14 13 15 2 (set (reg:SI 82 [ n.0_1 ])
+        (mem/c:SI (plus:DI (reg/f:DI 19 frame)
+                (const_int -16 [0xfffffffffffffff0])) [2 n+0 S4 A64])) "fib_1.c":9:9 75 {*movsi_internal}
+     (nil))
+(insn 15 14 16 2 (set (reg:SI 5 di)
+        (reg:SI 82 [ n.0_1 ])) "fib_1.c":9:9 75 {*movsi_internal}
+     (nil))
+(call_insn 16 15 17 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("fib") [flags 0x3]  <function_decl 0x7f327f3e6600 fib>) [0 fib S1 A8])
+            (const_int 0 [0]))) "fib_1.c":9:9 824 {*call_value}
+     (nil)
+    (expr_list:SI (use (reg:SI 5 di))
+        (nil)))
+(insn 17 16 18 2 (set (reg:SI 87)
+        (reg:SI 0 ax)) "fib_1.c":9:9 75 {*movsi_internal}
+     (nil))
+(insn 18 17 19 2 (set (mem/c:SI (plus:DI (reg/f:DI 19 frame)
+                (const_int -12 [0xfffffffffffffff4])) [2 result+0 S4 A32])
+        (reg:SI 87)) "fib_1.c":9:9 75 {*movsi_internal}
+     (nil))
+(insn 19 18 20 2 (set (reg:SI 88)
+        (mem/c:SI (plus:DI (reg/f:DI 19 frame)
+                (const_int -12 [0xfffffffffffffff4])) [2 result+0 S4 A32])) "fib_1.c":10:2 75 {*movsi_internal}
+     (nil))
+(insn 20 19 21 2 (set (reg:SI 4 si)
+        (reg:SI 88)) "fib_1.c":10:2 75 {*movsi_internal}
+     (nil))
+(insn 21 20 22 2 (set (reg:DI 89)
+        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x7f327f3eb630 *.LC1>)) "fib_1.c":10:2 74 {*movdi_internal}
+     (nil))
+(insn 22 21 23 2 (set (reg:DI 5 di)
+        (reg:DI 89)) "fib_1.c":10:2 74 {*movdi_internal}
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x7f327f3eb630 *.LC1>)
+        (nil)))
+(insn 23 22 24 2 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "fib_1.c":10:2 77 {*movqi_internal}
+     (nil))
+(call_insn 24 23 25 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("printf") [flags 0x41]  <function_decl 0x7f327f2b9100 printf>) [0 __builtin_printf S1 A8])
+            (const_int 0 [0]))) "fib_1.c":10:2 824 {*call_value}
+     (nil)
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:SI (use (reg:SI 4 si))
+                (nil)))))
+(insn 25 24 28 2 (set (reg:SI 83 [ _9 ])
+        (const_int 0 [0])) "fib_1.c":11:9 75 {*movsi_internal}
+     (nil))
+(insn 28 25 32 2 (set (reg:SI 84 [ <retval> ])
+        (reg:SI 83 [ _9 ])) "fib_1.c":12:1 75 {*movsi_internal}
+     (nil))
+(insn 32 28 33 2 (parallel [
+            (set (reg:CCZ 17 flags)
+                (unspec:CCZ [
+                        (mem/v/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                                (const_int -8 [0xfffffffffffffff8])) [1 D.2883+0 S8 A64])
+                        (mem/v/f:DI (const_int 40 [0x28]) [0 MEM[(<address-space-1> long unsigned int *)40B]+0 S8 A64 AS1])
+                    ] UNSPEC_SP_TEST))
+            (clobber (scratch:DI))
+        ]) "fib_1.c":12:1 1164 {stack_protect_test_1_di}
+     (nil))
+(jump_insn 33 32 40 2 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 36)
+            (pc))) "fib_1.c":12:1 806 {*jcc}
+     (nil)
+ -> 36)
+(note 40 33 34 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(call_insn 34 40 35 3 (call (mem:QI (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x7f327f3f2600 __stack_chk_fail>) [0 __stack_chk_fail S1 A8])
+        (const_int 0 [0])) "fib_1.c":12:1 813 {*call}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (expr_list:REG_NORETURN (const_int 0 [0])
+            (expr_list:REG_EH_REGION (const_int 0 [0])
+                (nil))))
+    (nil))
+(barrier 35 34 36)
+(code_label 36 35 41 4 3 (nil) [1 uses])
+(note 41 36 37 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 37 41 38 4 (set (reg/i:SI 0 ax)
+        (reg:SI 84 [ <retval> ])) "fib_1.c":12:1 75 {*movsi_internal}
+     (nil))
+(insn 38 37 0 4 (use (reg/i:SI 0 ax)) "fib_1.c":12:1 -1
+     (nil))
+
+;; Function fib (fib, funcdef_no=7, decl_uid=2864, cgraph_uid=8, symbol_order=7)
+
+verify found no changes in insn with uid = 20.
+verify found no changes in insn with uid = 25.
+
+
+fib
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [ax] 1 [dx] 2 [cx] 4 [si] 5 [di] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 20 [xmm0] 21 [xmm1] 22 [xmm2] 23 [xmm3] 24 [xmm4] 25 [xmm5] 26 [xmm6] 27 [xmm7] 28 [mm0] 29 [mm1] 30 [mm2] 31 [mm3] 32 [mm4] 33 [mm5] 34 [mm6] 35 [mm7] 36 [r8] 37 [r9] 38 [r10] 39 [r11] 44 [xmm8] 45 [xmm9] 46 [xmm10] 47 [xmm11] 48 [xmm12] 49 [xmm13] 50 [xmm14] 51 [xmm15] 52 [xmm16] 53 [xmm17] 54 [xmm18] 55 [xmm19] 56 [xmm20] 57 [xmm21] 58 [xmm22] 59 [xmm23] 60 [xmm24] 61 [xmm25] 62 [xmm26] 63 [xmm27] 64 [xmm28] 65 [xmm29] 66 [xmm30] 67 [xmm31] 68 [k0] 69 [k1] 70 [k2] 71 [k3] 72 [k4] 73 [k5] 74 [k6] 75 [k7]
+;;  hardware regs used 	
+;;  regular block artificial uses 	 6 [bp] 7 [sp] 16 [argp] 19 [frame]
+;;  eh block artificial uses 	 6 [bp] 7 [sp] 16 [argp] 19 [frame]
+;;  entry block defs 	 0 [ax] 1 [dx] 2 [cx] 4 [si] 5 [di] 6 [bp] 7 [sp] 16 [argp] 19 [frame] 20 [xmm0] 21 [xmm1] 22 [xmm2] 23 [xmm3] 24 [xmm4] 25 [xmm5] 26 [xmm6] 27 [xmm7] 36 [r8] 37 [r9]
+;;  exit block uses 	 0 [ax] 6 [bp] 7 [sp] 19 [frame]
+;;  regs ever live 	 0 [ax] 5 [di] 7 [sp] 17 [flags]
+;;  ref usage 	r0={4d,4u} r1={3d} r2={3d} r4={3d} r5={5d,3u} r6={1d,5u} r7={1d,7u} r8={2d} r9={2d} r10={2d} r11={2d} r12={2d} r13={2d} r14={2d} r15={2d} r16={1d,4u} r17={6d,1u} r18={2d} r19={1d,12u,2e} r20={3d} r21={3d} r22={3d} r23={3d} r24={3d} r25={3d} r26={3d} r27={3d} r28={2d} r29={2d} r30={2d} r31={2d} r32={2d} r33={2d} r34={2d} r35={2d} r36={3d} r37={3d} r38={2d} r39={2d} r44={2d} r45={2d} r46={2d} r47={2d} r48={2d} r49={2d} r50={2d} r51={2d} r52={2d} r53={2d} r54={2d} r55={2d} r56={2d} r57={2d} r58={2d} r59={2d} r60={2d} r61={2d} r62={2d} r63={2d} r64={2d} r65={2d} r66={2d} r67={2d} r68={2d} r69={2d} r70={2d} r71={2d} r72={2d} r73={2d} r74={2d} r75={2d} r82={1d,1u} r83={1d,1u} r84={1d,1u} r85={1d,1u} r86={2d,1u} r87={1d,1u} r88={1d,1u} r89={1d,1u} r90={1d,1u} 
+;;    total ref usage 217{170d,45u,2e} in 22{20 regular + 2 call} insns.
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/c:SI (plus:DI (reg/f:DI 19 frame)
+                (const_int -20 [0xffffffffffffffec])) [2 n+0 S4 A32])
+        (reg:SI 5 di [ n ])) "fib_1.c":14:15 75 {*movsi_internal}
+     (nil))
+(note 3 2 8 2 NOTE_INSN_FUNCTION_BEG)
+(insn 8 3 9 2 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 19 frame)
+                    (const_int -20 [0xffffffffffffffec])) [2 n+0 S4 A32])
+            (const_int 2 [0x2]))) "fib_1.c":15:4 11 {*cmpsi_1}
+     (nil))
+(jump_insn 9 8 10 2 (set (pc)
+        (if_then_else (gt (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 14)
+            (pc))) "fib_1.c":15:4 806 {*jcc}
+     (nil)
+ -> 14)
+(note 10 9 11 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 11 10 39 3 (set (reg:SI 86 [ _5 ])
+        (const_int 1 [0x1])) "fib_1.c":16:10 75 {*movsi_internal}
+     (nil))
+(jump_insn 39 11 40 3 (set (pc)
+        (label_ref 30)) "fib_1.c":16:10 -1
+     (nil)
+ -> 30)
+(barrier 40 39 14)
+(code_label 14 40 15 4 5 (nil) [1 uses])
+(note 15 14 16 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 16 15 17 4 (set (mem/c:SI (plus:DI (reg/f:DI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [2 result+0 S4 A32])
+        (const_int 0 [0])) "fib_1.c":17:6 75 {*movsi_internal}
+     (nil))
+(insn 17 16 18 4 (set (reg:SI 88)
+        (mem/c:SI (plus:DI (reg/f:DI 19 frame)
+                (const_int -20 [0xffffffffffffffec])) [2 n+0 S4 A32])) "fib_1.c":18:9 75 {*movsi_internal}
+     (nil))
+(insn 18 17 19 4 (parallel [
+            (set (reg:SI 82 [ _1 ])
+                (plus:SI (reg:SI 88)
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "fib_1.c":18:9 209 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (plus:DI (reg/f:DI 19 frame)
+                    (const_int -20 [0xffffffffffffffec])) [2 n+0 S4 A32])
+            (const_int -1 [0xffffffffffffffff]))
+        (nil)))
+(insn 19 18 20 4 (set (reg:SI 5 di)
+        (reg:SI 82 [ _1 ])) "fib_1.c":18:9 75 {*movsi_internal}
+     (nil))
+(call_insn 20 19 21 4 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("fib") [flags 0x3]  <function_decl 0x7f327f3e6600 fib>) [0 fib S1 A8])
+            (const_int 0 [0]))) "fib_1.c":18:9 824 {*call_value}
+     (nil)
+    (expr_list:SI (use (reg:SI 5 di))
+        (nil)))
+(insn 21 20 22 4 (set (reg:SI 83 [ _2 ])
+        (reg:SI 0 ax)) "fib_1.c":18:9 75 {*movsi_internal}
+     (nil))
+(insn 22 21 23 4 (set (reg:SI 89)
+        (mem/c:SI (plus:DI (reg/f:DI 19 frame)
+                (const_int -20 [0xffffffffffffffec])) [2 n+0 S4 A32])) "fib_1.c":18:18 75 {*movsi_internal}
+     (nil))
+(insn 23 22 24 4 (parallel [
+            (set (reg:SI 84 [ _3 ])
+                (plus:SI (reg:SI 89)
+                    (const_int -2 [0xfffffffffffffffe])))
+            (clobber (reg:CC 17 flags))
+        ]) "fib_1.c":18:18 209 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (plus:DI (reg/f:DI 19 frame)
+                    (const_int -20 [0xffffffffffffffec])) [2 n+0 S4 A32])
+            (const_int -2 [0xfffffffffffffffe]))
+        (nil)))
+(insn 24 23 25 4 (set (reg:SI 5 di)
+        (reg:SI 84 [ _3 ])) "fib_1.c":18:18 75 {*movsi_internal}
+     (nil))
+(call_insn 25 24 26 4 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("fib") [flags 0x3]  <function_decl 0x7f327f3e6600 fib>) [0 fib S1 A8])
+            (const_int 0 [0]))) "fib_1.c":18:18 824 {*call_value}
+     (nil)
+    (expr_list:SI (use (reg:SI 5 di))
+        (nil)))
+(insn 26 25 27 4 (set (reg:SI 85 [ _4 ])
+        (reg:SI 0 ax)) "fib_1.c":18:18 75 {*movsi_internal}
+     (nil))
+(insn 27 26 28 4 (parallel [
+            (set (reg:SI 90)
+                (plus:SI (reg:SI 83 [ _2 ])
+                    (reg:SI 85 [ _4 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "fib_1.c":18:8 209 {*addsi_1}
+     (nil))
+(insn 28 27 29 4 (set (mem/c:SI (plus:DI (reg/f:DI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [2 result+0 S4 A32])
+        (reg:SI 90)) "fib_1.c":18:8 75 {*movsi_internal}
+     (nil))
+(insn 29 28 30 4 (set (reg:SI 86 [ _5 ])
+        (mem/c:SI (plus:DI (reg/f:DI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [2 result+0 S4 A32])) "fib_1.c":19:9 75 {*movsi_internal}
+     (nil))
+(code_label 30 29 31 5 6 (nil) [1 uses])
+(note 31 30 32 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 32 31 36 5 (set (reg:SI 87 [ <retval> ])
+        (reg:SI 86 [ _5 ])) "fib_1.c":20:1 75 {*movsi_internal}
+     (nil))
+(insn 36 32 37 5 (set (reg/i:SI 0 ax)
+        (reg:SI 87 [ <retval> ])) "fib_1.c":20:1 75 {*movsi_internal}
+     (nil))
+(insn 37 36 0 5 (use (reg/i:SI 0 ax)) "fib_1.c":20:1 -1
+     (nil))

@@ -1,0 +1,62 @@
+int main ()
+{
+  int D.3190;
+
+  {
+    int n;
+    int result;
+
+    try
+      {
+        n = 0;
+        result = 0;
+        scanf ("%d", &n);
+        n.0_1 = n;
+        result = fib (n.0_1);
+        printf ("%d\n", result);
+        D.3190 = 0;
+        return D.3190;
+      }
+    finally
+      {
+        n = {CLOBBER};
+      }
+  }
+  D.3190 = 0;
+  return D.3190;
+}
+
+
+__attribute__((artificial, gnu_inline, always_inline))
+__attribute__((nonnull (1), format (printf, 1, 2)))
+int printf (const char * restrict __fmt)
+{
+  int D.3193;
+
+  D.3193 = __printf_chk (1, __fmt, __builtin_va_arg_pack ());
+  return D.3193;
+}
+
+
+int fib (int n)
+{
+  int D.3197;
+  int result;
+
+  if (n <= 2) goto <D.3195>; else goto <D.3196>;
+  <D.3195>:
+  D.3197 = 1;
+  // predicted unlikely by early return (on trees) predictor.
+  return D.3197;
+  <D.3196>:
+  result = 0;
+  _1 = n + -1;
+  _2 = fib (_1);
+  _3 = n + -2;
+  _4 = fib (_3);
+  result = _2 + _4;
+  D.3197 = result;
+  return D.3197;
+}
+
+

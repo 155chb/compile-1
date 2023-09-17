@@ -1,0 +1,52 @@
+28 ssa "unused VAR_DECLs removed" "fib" 1
+28 ssa "unused VAR_DECLs removed" "main" 1
+42 fre "RPO blocks" "printf" 1
+42 fre "RPO iterations == 10" "printf" 1
+42 fre "RPO blocks visited" "printf" 1
+42 fre "RPO blocks executable" "printf" 1
+42 fre "RPO block visited times == 1" "printf" 1
+42 fre "RPO num avail == 1" "printf" 1
+42 fre "RPO num values == 3" "printf" 1
+42 fre "RPO num lattice == 3" "printf" 1
+37 ccp "Copies propagated" "fib" 1
+37 ccp "Statements deleted" "fib" 3
+42 fre "RPO num lattice == 10" "fib" 1
+42 fre "RPO blocks" "fib" 4
+42 fre "RPO iterations == 10" "fib" 1
+42 fre "RPO blocks visited" "fib" 4
+42 fre "RPO num values == 10" "fib" 1
+42 fre "RPO blocks executable" "fib" 4
+42 fre "RPO block visited times == 1" "fib" 4
+42 fre "RPO num avail == 6" "fib" 1
+56 release_ssa "SSA names released" "fib" 5
+56 release_ssa "SSA name holes removed" "fib" 5
+37 ccp "Statements deleted" "main" 2
+37 ccp "Constants propagated" "main" 1
+42 fre "RPO blocks" "main" 1
+42 fre "RPO iterations == 10" "main" 1
+42 fre "RPO num values == 7" "main" 1
+42 fre "RPO blocks visited" "main" 1
+42 fre "RPO num avail == 3" "main" 1
+42 fre "RPO blocks executable" "main" 1
+42 fre "RPO block visited times == 1" "main" 1
+42 fre "RPO num lattice == 7" "main" 1
+56 release_ssa "SSA names released" "main" 4
+56 release_ssa "SSA name holes removed" "main" 4
+112 fre "RPO blocks" "fib" 3
+112 fre "RPO iterations == 10" "fib" 1
+112 fre "RPO num values == 8" "fib" 1
+112 fre "RPO blocks visited" "fib" 3
+112 fre "RPO blocks executable" "fib" 3
+112 fre "RPO block visited times == 1" "fib" 3
+112 fre "RPO num avail == 6" "fib" 1
+112 fre "RPO num lattice == 8" "fib" 1
+116 dce "PHI nodes deleted" "fib" 1
+282 combine "two-insn combine" "fib" 1
+112 fre "RPO blocks" "main" 1
+112 fre "RPO iterations == 10" "main" 1
+112 fre "RPO num values == 6" "main" 1
+112 fre "RPO blocks visited" "main" 1
+112 fre "RPO num lattice == 6" "main" 1
+112 fre "RPO blocks executable" "main" 1
+112 fre "RPO block visited times == 1" "main" 1
+112 fre "RPO num avail == 2" "main" 1

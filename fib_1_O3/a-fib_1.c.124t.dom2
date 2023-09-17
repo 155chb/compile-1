@@ -1,0 +1,468 @@
+
+;; Function fib (fib, funcdef_no=40, decl_uid=3180, cgraph_uid=41, symbol_order=40)
+
+;; 10 loops found
+;;
+;; Loop 0
+;;  header 0, latch 1
+;;  depth 0, outer -1
+;;  nodes: 0 1 2 3 21 4 5 30 22 6 7 31 23 8 9 32 24 10 11 33 25 12 13 34 26 14 15 35 27 16 17 36 28 18 19 37 29 20 38
+;;
+;; Loop 1
+;;  header 4, latch 30
+;;  depth 1, outer 0
+;;  nodes: 4 30 5 7 9 6 31 22 11 8 32 23 13 10 33 24 15 12 34 25 17 14 35 26 19 16 36 27 20 18 37 28 38 29
+;;
+;; Loop 2
+;;  header 6, latch 31
+;;  depth 2, outer 1
+;;  nodes: 6 31 7 9 11 8 32 23 13 10 33 24 15 12 34 25 17 14 35 26 19 16 36 27 20 18 37 28 38 29
+;;
+;; Loop 3
+;;  header 8, latch 32
+;;  depth 3, outer 2
+;;  nodes: 8 32 9 11 13 10 33 24 15 12 34 25 17 14 35 26 19 16 36 27 20 18 37 28 38 29
+;;
+;; Loop 4
+;;  header 10, latch 33
+;;  depth 4, outer 3
+;;  nodes: 10 33 11 13 15 12 34 25 17 14 35 26 19 16 36 27 20 18 37 28 38 29
+;;
+;; Loop 5
+;;  header 12, latch 34
+;;  depth 5, outer 4
+;;  nodes: 12 34 13 15 17 14 35 26 19 16 36 27 20 18 37 28 38 29
+;;
+;; Loop 6
+;;  header 14, latch 35
+;;  depth 6, outer 5
+;;  nodes: 14 35 15 17 19 16 36 27 20 18 37 28 38 29
+;;
+;; Loop 7
+;;  header 16, latch 36
+;;  depth 7, outer 6
+;;  nodes: 16 36 17 19 20 18 37 28 38 29
+;;
+;; Loop 8
+;;  header 18, latch 37
+;;  depth 8, outer 7
+;;  nodes: 18 37 19 20 38 29
+;;
+;; Loop 9
+;;  header 20, latch 38
+;;  depth 9, outer 8
+;;  nodes: 20 38
+;; 2 succs { 3 21 }
+;; 3 succs { 1 }
+;; 21 succs { 4 }
+;; 4 succs { 5 22 }
+;; 5 succs { 3 30 }
+;; 30 succs { 4 }
+;; 22 succs { 6 }
+;; 6 succs { 7 23 }
+;; 7 succs { 5 31 }
+;; 31 succs { 6 }
+;; 23 succs { 8 }
+;; 8 succs { 9 24 }
+;; 9 succs { 7 32 }
+;; 32 succs { 8 }
+;; 24 succs { 10 }
+;; 10 succs { 11 25 }
+;; 11 succs { 9 33 }
+;; 33 succs { 10 }
+;; 25 succs { 12 }
+;; 12 succs { 13 26 }
+;; 13 succs { 11 34 }
+;; 34 succs { 12 }
+;; 26 succs { 14 }
+;; 14 succs { 15 27 }
+;; 15 succs { 13 35 }
+;; 35 succs { 14 }
+;; 27 succs { 16 }
+;; 16 succs { 17 28 }
+;; 17 succs { 15 36 }
+;; 36 succs { 16 }
+;; 28 succs { 18 }
+;; 18 succs { 19 29 }
+;; 19 succs { 17 37 }
+;; 37 succs { 18 }
+;; 29 succs { 20 }
+;; 20 succs { 19 38 }
+;; 38 succs { 20 }
+threading bb 20 kills 3 stmts
+threading bb 20 up to 18 stmts
+Removing basic block 21
+Removing basic block 22
+Removing basic block 23
+Removing basic block 24
+Removing basic block 25
+Removing basic block 26
+Removing basic block 27
+Removing basic block 28
+Removing basic block 29
+Removing basic block 30
+Removing basic block 31
+Removing basic block 32
+Removing basic block 33
+Removing basic block 34
+Removing basic block 35
+Removing basic block 36
+Removing basic block 37
+Removing basic block 38
+int fib (int n)
+{
+  int D.3229;
+  int n;
+  int D.3227;
+  int n;
+  int D.3225;
+  int n;
+  int D.3223;
+  int n;
+  int D.3221;
+  int n;
+  int D.3219;
+  int n;
+  int D.3217;
+  int n;
+  int D.3215;
+  int n;
+  int _1;
+  int _3;
+  int add_acc_8;
+  int acc_tmp_9;
+  int acc_tmp_13;
+  int _14;
+  int _16;
+  int add_acc_17;
+  int acc_tmp_20;
+  int _21;
+  int _23;
+  int add_acc_24;
+  int acc_tmp_27;
+  int _28;
+  int _30;
+  int add_acc_31;
+  int acc_tmp_34;
+  int _35;
+  int _37;
+  int add_acc_38;
+  int acc_tmp_41;
+  int _42;
+  int _44;
+  int add_acc_45;
+  int acc_tmp_48;
+  int _49;
+  int _51;
+  int add_acc_52;
+  int acc_tmp_55;
+  int _56;
+  int _58;
+  int add_acc_59;
+  int acc_tmp_62;
+  int _63;
+  int _64;
+  int _65;
+  int add_acc_66;
+  int add_acc_79;
+  int add_acc_80;
+  int add_acc_84;
+  int add_acc_85;
+  int add_acc_87;
+  int add_acc_88;
+  int add_acc_90;
+  int add_acc_91;
+  int add_acc_93;
+  int add_acc_94;
+  int add_acc_96;
+  int add_acc_97;
+  int add_acc_99;
+  int add_acc_100;
+  int add_acc_102;
+  int add_acc_103;
+  int add_acc_105;
+  int add_acc_106;
+
+  <bb 2> [local count: 236223200]:
+  if (n_5(D) <= 2)
+    goto <bb 3>; [22.00%]
+  else
+    goto <bb 4>; [78.00%]
+
+  <bb 3> [local count: 236223200]:
+  # add_acc_79 = PHI <add_acc_8(5), 0(2)>
+  acc_tmp_9 = add_acc_79 + 1;
+  return acc_tmp_9;
+
+  <bb 4> [local count: 837529967]:
+  # n_78 = PHI <_3(5), n_5(D)(2)>
+  # add_acc_80 = PHI <add_acc_8(5), 0(2)>
+  _1 = n_78 + -1;
+  if (_1 <= 2)
+    goto <bb 5>; [22.00%]
+  else
+    goto <bb 6>; [78.00%]
+
+  <bb 5> [local count: 837554935]:
+  # add_acc_84 = PHI <add_acc_17(7), 0(4)>
+  acc_tmp_13 = add_acc_84 + 1;
+  _3 = n_78 + -2;
+  add_acc_8 = add_acc_80 + acc_tmp_13;
+  if (_3 <= 2)
+    goto <bb 3>; [22.00%]
+  else
+    goto <bb 4>; [78.00%]
+
+  <bb 6> [local count: 2969456207]:
+  # n_83 = PHI <_16(7), _1(4)>
+  # add_acc_85 = PHI <add_acc_17(7), 0(4)>
+  _14 = n_83 + -1;
+  if (_14 <= 2)
+    goto <bb 7>; [22.00%]
+  else
+    goto <bb 8>; [78.00%]
+
+  <bb 7> [local count: 2969456207]:
+  # add_acc_87 = PHI <add_acc_24(9), 0(6)>
+  acc_tmp_20 = add_acc_87 + 1;
+  _16 = n_83 + -2;
+  add_acc_17 = add_acc_85 + acc_tmp_20;
+  if (_16 <= 2)
+    goto <bb 5>; [22.00%]
+  else
+    goto <bb 6>; [78.00%]
+
+  <bb 8> [local count: 10528074277]:
+  # n_86 = PHI <_23(9), _14(6)>
+  # add_acc_88 = PHI <add_acc_24(9), 0(6)>
+  _21 = n_86 + -1;
+  if (_21 <= 2)
+    goto <bb 9>; [22.00%]
+  else
+    goto <bb 10>; [78.00%]
+
+  <bb 9> [local count: 10528074277]:
+  # add_acc_90 = PHI <add_acc_31(11), 0(8)>
+  acc_tmp_27 = add_acc_90 + 1;
+  _23 = n_86 + -2;
+  add_acc_24 = add_acc_88 + acc_tmp_27;
+  if (_23 <= 2)
+    goto <bb 7>; [22.00%]
+  else
+    goto <bb 8>; [78.00%]
+
+  <bb 10> [local count: 37326761134]:
+  # n_89 = PHI <_30(11), _21(8)>
+  # add_acc_91 = PHI <add_acc_31(11), 0(8)>
+  _28 = n_89 + -1;
+  if (_28 <= 2)
+    goto <bb 11>; [22.00%]
+  else
+    goto <bb 12>; [78.00%]
+
+  <bb 11> [local count: 37326761134]:
+  # add_acc_93 = PHI <add_acc_38(13), 0(10)>
+  acc_tmp_34 = add_acc_93 + 1;
+  _30 = n_89 + -2;
+  add_acc_31 = add_acc_91 + acc_tmp_34;
+  if (_30 <= 2)
+    goto <bb 9>; [22.00%]
+  else
+    goto <bb 10>; [78.00%]
+
+  <bb 12> [local count: 132340346279]:
+  # n_92 = PHI <_37(13), _28(10)>
+  # add_acc_94 = PHI <add_acc_38(13), 0(10)>
+  _35 = n_92 + -1;
+  if (_35 <= 2)
+    goto <bb 13>; [22.00%]
+  else
+    goto <bb 14>; [78.00%]
+
+  <bb 13> [local count: 132340346279]:
+  # add_acc_96 = PHI <add_acc_45(15), 0(12)>
+  acc_tmp_41 = add_acc_96 + 1;
+  _37 = n_92 + -2;
+  add_acc_38 = add_acc_94 + acc_tmp_41;
+  if (_37 <= 2)
+    goto <bb 11>; [22.00%]
+  else
+    goto <bb 12>; [78.00%]
+
+  <bb 14> [local count: 469206689072]:
+  # n_95 = PHI <_44(15), _35(12)>
+  # add_acc_97 = PHI <add_acc_45(15), 0(12)>
+  _42 = n_95 + -1;
+  if (_42 <= 2)
+    goto <bb 15>; [22.00%]
+  else
+    goto <bb 16>; [78.00%]
+
+  <bb 15> [local count: 469206714040]:
+  # add_acc_99 = PHI <add_acc_52(17), 0(14)>
+  acc_tmp_48 = add_acc_99 + 1;
+  _44 = n_95 + -2;
+  add_acc_45 = add_acc_97 + acc_tmp_48;
+  if (_44 <= 2)
+    goto <bb 13>; [22.00%]
+  else
+    goto <bb 14>; [78.00%]
+
+  <bb 16> [local count: 1663551038463]:
+  # n_98 = PHI <_51(17), _42(14)>
+  # add_acc_100 = PHI <add_acc_52(17), 0(14)>
+  _49 = n_98 + -1;
+  if (_49 <= 2)
+    goto <bb 17>; [22.00%]
+  else
+    goto <bb 18>; [78.00%]
+
+  <bb 17> [local count: 1663551038463]:
+  # add_acc_102 = PHI <add_acc_59(19), 0(16)>
+  acc_tmp_55 = add_acc_102 + 1;
+  _51 = n_98 + -2;
+  add_acc_52 = add_acc_100 + acc_tmp_55;
+  if (_51 <= 2)
+    goto <bb 15>; [22.00%]
+  else
+    goto <bb 16>; [78.00%]
+
+  <bb 18> [local count: 5898044627232]:
+  # n_101 = PHI <_58(19), _49(16)>
+  # add_acc_103 = PHI <add_acc_59(19), 0(16)>
+  _56 = n_101 + -1;
+  if (_56 <= 2)
+    goto <bb 19>; [22.00%]
+  else
+    goto <bb 20>; [78.00%]
+
+  <bb 19> [local count: 5898044627232]:
+  # add_acc_105 = PHI <add_acc_66(20), 0(18)>
+  acc_tmp_62 = add_acc_105 + 1;
+  _58 = n_101 + -2;
+  add_acc_59 = add_acc_103 + acc_tmp_62;
+  if (_58 <= 2)
+    goto <bb 17>; [22.00%]
+  else
+    goto <bb 18>; [78.00%]
+
+  <bb 20> [local count: 20911249278181]:
+  # n_104 = PHI <_65(20), _56(18)>
+  # add_acc_106 = PHI <add_acc_66(20), 0(18)>
+  _63 = n_104 + -1;
+  _64 = fib (_63);
+  _65 = n_104 + -2;
+  add_acc_66 = add_acc_106 + _64;
+  if (_65 <= 2)
+    goto <bb 19>; [22.00%]
+  else
+    goto <bb 20>; [78.00%]
+
+}
+
+
+
+;; Function main (main, funcdef_no=39, decl_uid=3181, cgraph_uid=40, symbol_order=39) (executed once)
+
+;; 3 loops found
+;;
+;; Loop 0
+;;  header 0, latch 1
+;;  depth 0, outer -1
+;;  nodes: 0 1 2 3 7 4 5 9 8 6 10
+;;
+;; Loop 1
+;;  header 4, latch 9
+;;  depth 1, outer 0
+;;  nodes: 4 9 5 6 10 8
+;;
+;; Loop 2
+;;  header 6, latch 10
+;;  depth 2, outer 1
+;;  nodes: 6 10
+;; 2 succs { 3 7 }
+;; 3 succs { 1 }
+;; 7 succs { 4 }
+;; 4 succs { 5 8 }
+;; 5 succs { 3 9 }
+;; 9 succs { 4 }
+;; 8 succs { 6 }
+;; 6 succs { 5 10 }
+;; 10 succs { 6 }
+threading bb 6 kills 3 stmts
+threading bb 6 up to 18 stmts
+Removing basic block 7
+Removing basic block 8
+Removing basic block 9
+Removing basic block 10
+int main ()
+{
+  int D.3307;
+  int n;
+  int n;
+  int n;
+  int n.0_1;
+  int acc_tmp_8;
+  int _9;
+  int _11;
+  int add_acc_12;
+  int acc_tmp_17;
+  int _18;
+  int _19;
+  int _20;
+  int add_acc_21;
+  int add_acc_25;
+  int add_acc_26;
+  int add_acc_28;
+  int add_acc_29;
+
+  <bb 2> [local count: 236223200]:
+  n = 0;
+  scanf ("%d", &n);
+  n.0_1 = n;
+  if (n.0_1 <= 2)
+    goto <bb 3>; [22.00%]
+  else
+    goto <bb 4>; [78.00%]
+
+  <bb 3> [local count: 236223200]:
+  # add_acc_25 = PHI <add_acc_12(5), 0(2)>
+  acc_tmp_8 = add_acc_25 + 1;
+  __printf_chk (1, "%d\n", acc_tmp_8);
+  n ={v} {CLOBBER};
+  return 0;
+
+  <bb 4> [local count: 837518623]:
+  # n_24 = PHI <_11(5), n.0_1(2)>
+  # add_acc_26 = PHI <add_acc_12(5), 0(2)>
+  _9 = n_24 + -1;
+  if (_9 <= 2)
+    goto <bb 5>; [22.00%]
+  else
+    goto <bb 6>; [78.00%]
+
+  <bb 5> [local count: 837518623]:
+  # add_acc_28 = PHI <add_acc_21(6), 0(4)>
+  acc_tmp_17 = add_acc_28 + 1;
+  _11 = n_24 + -2;
+  add_acc_12 = add_acc_26 + acc_tmp_17;
+  if (_11 <= 2)
+    goto <bb 3>; [22.00%]
+  else
+    goto <bb 4>; [78.00%]
+
+  <bb 6> [local count: 2969384231]:
+  # n_27 = PHI <_20(6), _9(4)>
+  # add_acc_29 = PHI <add_acc_21(6), 0(4)>
+  _18 = n_27 + -1;
+  _19 = fib (_18);
+  _20 = n_27 + -2;
+  add_acc_21 = add_acc_29 + _19;
+  if (_20 <= 2)
+    goto <bb 5>; [22.00%]
+  else
+    goto <bb 6>; [78.00%]
+
+}
+
+

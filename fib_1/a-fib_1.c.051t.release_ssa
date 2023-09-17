@@ -1,0 +1,73 @@
+
+;; Function fib (fib, funcdef_no=7, decl_uid=2864, cgraph_uid=8, symbol_order=7)
+
+Released 0 names, 0.00%, removed 0 holes
+int fib (int n)
+{
+  int result;
+  int D.2879;
+  int _1;
+  int _2;
+  int _3;
+  int _4;
+  int _5;
+  int _13;
+  int _14;
+
+  <bb 2> :
+  if (n_7(D) <= 2)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  _14 = 1;
+  // predicted unlikely by early return (on trees) predictor.
+  goto <bb 5>; [INV]
+
+  <bb 4> :
+  result_8 = 0;
+  _1 = n_7(D) + -1;
+  _2 = fib (_1);
+  _3 = n_7(D) + -2;
+  _4 = fib (_3);
+  result_12 = _2 + _4;
+  _13 = result_12;
+
+  <bb 5> :
+  # _5 = PHI <_14(3), _13(4)>
+<L2>:
+  return _5;
+
+}
+
+
+
+;; Function main (main, funcdef_no=6, decl_uid=2865, cgraph_uid=7, symbol_order=6)
+
+Released 0 names, 0.00%, removed 0 holes
+int main ()
+{
+  int result;
+  int n;
+  int D.2874;
+  int n.0_1;
+  int _9;
+
+  <bb 2> :
+  n = 0;
+  result_4 = 0;
+  scanf ("%d", &n);
+  n.0_1 = n;
+  result_7 = fib (n.0_1);
+  printf ("%d\n", result_7);
+  _9 = 0;
+  n ={v} {CLOBBER};
+
+  <bb 3> :
+<L1>:
+  return _9;
+
+}
+
+

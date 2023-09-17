@@ -1,0 +1,143 @@
+
+;; Function printf (printf, funcdef_no=15, decl_uid=964, cgraph_uid=16, symbol_order=15)
+
+
+Analyzing function body size: printf/15
+
+IPA function summary for printf/15 always_inline inlinable
+  global time:     15.000000
+  self size:       7
+  global size:     0
+  min size:       0
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    __printf_chk/42 function body not available
+      freq:1.00 loop depth: 0 size: 4 time: 13
+       op0 is compile time invariant
+
+__attribute__((artificial, gnu_inline, always_inline))
+__attribute__((nonnull (1), format (printf, 1, 2)))
+int printf (const char * restrict __fmt)
+{
+  int _4;
+
+  <bb 2> :
+  _4 = __printf_chk (1, __fmt_2(D), __builtin_va_arg_pack ());
+  return _4;
+
+}
+
+
+
+;; Function fib (fib, funcdef_no=40, decl_uid=3180, cgraph_uid=41, symbol_order=40)
+
+
+Analyzing function body size: fib/40
+
+IPA function summary for fib/40 inlinable
+  global time:     31.000000
+  self size:       14
+  global size:     0
+  min size:       0
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+    size:2.000000, time:2.000000,  nonconst if:(op0 changed)
+    size:2.000000, time:2.000000,  executed if:(op0 > 2),  nonconst if:(op0 changed) && (op0 > 2)
+    size:1.000000, time:1.000000,  executed if:(op0 > 2)
+  calls:
+    fib/40 function not considered for inlining
+      freq:1.00 loop depth: 0 size: 3 time: 12 callee size: 0 stack: 0 predicate: (op0 > 2)
+    fib/40 function not considered for inlining
+      freq:1.00 loop depth: 0 size: 3 time: 12 callee size: 0 stack: 0 predicate: (op0 > 2)
+
+int fib (int n)
+{
+  int result;
+  int _1;
+  int _2;
+  int _3;
+  int _4;
+  int _5;
+  int _13;
+  int _14;
+
+  <bb 2> :
+  if (n_7(D) <= 2)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  _14 = 1;
+  // predicted unlikely by early return (on trees) predictor.
+  goto <bb 5>; [INV]
+
+  <bb 4> :
+  result_8 = 0;
+  _1 = n_7(D) + -1;
+  _2 = fib (_1);
+  _3 = n_7(D) + -2;
+  _4 = fib (_3);
+  result_12 = _2 + _4;
+  _13 = result_12;
+
+  <bb 5> :
+  # _5 = PHI <_14(3), _13(4)>
+  return _5;
+
+}
+
+
+
+;; Function main (main, funcdef_no=39, decl_uid=3181, cgraph_uid=40, symbol_order=39)
+
+
+Analyzing function body size: main/39
+
+IPA function summary for main/39 inlinable
+  global time:     40.000000
+  self size:       14
+  global size:     0
+  min size:       0
+  self stack:      4
+  global stack:    4
+    size:2.000000, time:2.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    printf/15 function not considered for inlining
+      freq:1.00 loop depth: 0 size: 3 time: 12 callee size: 3 stack: 0
+       op0 is compile time invariant
+    fib/40 function not considered for inlining
+      freq:1.00 loop depth: 0 size: 3 time: 12 callee size: 6 stack: 0
+    scanf/41 function body not available
+      freq:1.00 loop depth: 0 size: 3 time: 12
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op1 points to local or readonly memory
+
+int main ()
+{
+  int result;
+  int n;
+  int n.0_1;
+  int _9;
+
+  <bb 2> :
+  n = 0;
+  result_4 = 0;
+  scanf ("%d", &n);
+  n.0_1 = n;
+  result_7 = fib (n.0_1);
+  printf ("%d\n", result_7);
+  _9 = 0;
+  n ={v} {CLOBBER};
+  return _9;
+
+}
+
+
